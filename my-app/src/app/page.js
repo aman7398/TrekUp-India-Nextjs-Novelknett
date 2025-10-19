@@ -6,6 +6,8 @@ import HarKiDunGallery from "@/components/photos/page";
 import HarKiDunTrekVideos from "@/components/trekvideos/page";
 import EverestBaseCampGuide from "@/components/seasonGuid/page";
 import MeetTheExpert from "@/components/experts/page";
+import LayeringSystem from "@/components/gearList/page";
+import CategoryFilter from "@/components/searchCategory/page";
 export default function Home() {
   return (
     <>
@@ -16,6 +18,8 @@ export default function Home() {
       <HarKiDunTrekVideos />
       <EverestBaseCampGuide />
       <MeetTheExpert />
+      <LayeringSystem />
+      <CategoryFilter />
       {/* <CardSlider /> */}
     </>
   );
