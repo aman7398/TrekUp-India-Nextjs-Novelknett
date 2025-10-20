@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
-
+import ExpeditionSlider from "./searchComponent/expiditions/page.js";
+import DifficultyLevelSection from "./searchComponent/expiditionsFooter/page.js";
+import BlogArticle from "./searchComponent/blogCategory/page.js";
 // ✅ Sidebar Category Filter Component
 const monthWise = [
     "January", "February", "March", "April", "May", "June",
@@ -158,8 +160,9 @@ export default function TrekPage() {
                     <CategoryFilter />
                 </aside>
 
+
                 {/* ✅ Main Content matches height */}
-                <section className="w-full md:w-3/4 px-4 md:px-8 py-6 space-y-6 flex flex-col justify-between h-full">
+                <section className="w-full md:w-3/4 px-4 md:px-8 py-6 space-y-4 flex flex-col justify-between h-full">
                     {/* Top Title */}
                     <div className="text-center">
                         <h1 className="text-xl md:text-2xl font-bold text-blue-900">
@@ -257,18 +260,22 @@ export default function TrekPage() {
 
 
                     {/* High Altitude Section */}
-                    <div className="text-center">
+                    <div className="text-center p-12">
                         <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-2">
                             High-Altitude Expeditions (Above 6,000 Meters / 19,685 Feet)
                         </h2>
-                        <p className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto">
+                        <p className="text-sm md:text-base text-gray-700 w-full mx-auto text-start">
                             Above 6,000 meters, the world becomes raw and untamed—glaciers gleam,
                             peaks pierce the sky, and every step is a test of will. This is where
                             Earth meets sky, calling adventurers to rise above the ordinary.
                         </p>
                     </div>
+                    <ExpeditionSlider />
+
                 </section>
             </div>
+            <BlogArticle />
+            <DifficultyLevelSection />
         </main>
     );
 }
